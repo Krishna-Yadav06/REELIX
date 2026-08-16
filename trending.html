@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reelix - Trending</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="trending.css">
+    <link rel="icon" href="reelix_favicon.png">
+</head>
+
+<body>
+
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader-content">
+            
+        <div class="loading-logo">
+                <span class="play-icon">▶</span>
+                <span>REELIX</span>
+            </div>
+            <div class="loader-bar">
+                <span></span>
+            </div>
+            <p>Loading your movies...</p>
+        </div>
+    </div>
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">▶</span>
+            <span>Reelix</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="trending.html" class="active">Trending</a>
+            <!-- <a href="watchlist.html">Watchlist</a> -->
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section class="trending-hero">
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+                <span class="hero-tag">🔥 TRENDING NOW</span>
+
+                <h1>What Everyone<br>Is Watching</h1>
+
+                <p>
+                    Discover the most popular movies people are watching
+                    right now.
+                </p>
+
+                <a href="#trendingSection" class="explore-btn">
+                    Explore Trending
+                </a>
+            </div>
+
+        </section>
+
+
+        <section class="movie-section" id="trendingSection">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">POPULAR</span>
+                    <h2>🔥 Trending Now</h2>
+                </div>
+
+                <span class="section-description">
+                    Most downloaded movies
+                </span>
+            </div>
+
+            <div class="movie-grid" id="trendingMovies"></div>
+
+        </section>
+
+
+        <section class="movie-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">TOP PICKS</span>
+                    <h2>⭐ Highest Rated</h2>
+                </div>
+
+                <span class="section-description">
+                    Movies with the best ratings
+                </span>
+            </div>
+
+            <div class="movie-grid" id="ratedMovies"></div>
+
+        </section>
+
+
+        <section class="movie-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">FAN FAVORITES</span>
+                    <h2>❤️ Most Liked</h2>
+                </div>
+
+                <span class="section-description">
+                    Loved by movie fans
+                </span>
+            </div>
+
+            <div class="movie-grid" id="likedMovies"></div>
+
+        </section>
+
+
+        <section class="movie-section">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">FRESH</span>
+                    <h2>🆕 Recently Added</h2>
+                </div>
+
+                <span class="section-description">
+                    New movies added to Reelix
+                </span>
+            </div>
+
+            <div class="movie-grid" id="recentMovies"></div>
+
+        </section>
+
+    </main>
+
+    <script src="trending.js"></script>
+
+</body>
+</html>

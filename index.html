@@ -1,0 +1,351 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <title>Reelix — Discover. Decide. Watch.</title> 
+
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="shortcut icon" href="reelix_favicon.png" type="image/x-icon"> 
+</head> 
+
+<body> 
+
+    <!-- ======================================== 
+         LOADING SCREEN
+    ========================================= --> 
+
+    <div class="loading-screen" id="loadingScreen"> 
+
+        <div class="loading-content"> 
+
+            <div class="loading-logo"> 
+                <span class="play-icon">▶</span> 
+                <span>REELIX</span> 
+            </div> 
+
+            <p>Discover. Decide. Watch.</p> 
+
+            <div class="loading-dots"> 
+                <span></span> 
+                <span></span> 
+                <span></span> 
+            </div> 
+
+        </div> 
+
+    </div> 
+
+
+    <!-- ======================================== 
+         NAVBAR
+    ========================================= --> 
+
+    <header class="navbar"> 
+
+        <a href="#" class="logo" id="logo"> 
+            <span class="logo-icon">▶</span> 
+            <span>REELIX</span> 
+        </a> 
+
+        <!-- Mobile menu keeps navigation and search in one flow --> 
+        <div class="mobile-menu" id="mobileMenu"> 
+
+            <nav> 
+
+                <a href="#" id="homeBtn">Home</a> 
+                <a href="#movies" id="moviesBtn">Movies</a> 
+                <a href="#watchlist" id="watchlistBtn">Watchlist</a> 
+
+            </nav> 
+
+            <div class="nav-actions"> 
+
+                <div class="search-box"> 
+
+                    <span>⌕</span> 
+
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search movies..." 
+                    > 
+
+                </div> 
+
+                <button class="search-btn" id="searchBtn"> 
+                    Search 
+                </button> 
+
+            </div> 
+
+        </div> 
+
+        <button class="hamburger" id="hamburger"> 
+            ☰ 
+        </button> 
+
+    </header> 
+
+
+    <!-- ======================================== 
+         HERO SECTION
+    ========================================= --> 
+
+    <main> 
+
+        <section class="hero" id="heroSection"> 
+
+            <div class="hero-content"> 
+
+                <span class="hero-label"> 
+                    YOUR NEXT FAVORITE MOVIE 
+                </span> 
+
+                <h1 id="heroTitle"> 
+                    Discover movies<br> 
+                    worth watching. 
+                </h1> 
+
+                <p id="heroDescription"> 
+                    Explore popular movies, discover hidden gems, 
+                    and find something perfect for your mood. 
+                </p> 
+
+                <div class="hero-buttons"> 
+
+                    <button class="primary-btn" id="exploreBtn"> 
+                        <a href="#movies">Explore Movies</a> 
+                    </button> 
+
+                    <button class="secondary-btn" id="trendingBtn"> 
+                        <a href="trending.html" target="_blank">View Trending</a> 
+                    </button> 
+
+                </div> 
+
+            </div> 
+
+            <div class="hero-visual"> 
+
+                <div class="hero-card hero-card-one"></div> 
+                <div class="hero-card hero-card-two"></div> 
+                <div class="hero-card hero-card-three"></div> 
+
+            </div> 
+
+        </section> 
+
+
+        <!-- ======================================== 
+             MOVIE SECTION
+        ========================================= --> 
+
+        <section class="movie-section" id="movies"> 
+
+            <div class="section-heading"> 
+
+                <div> 
+                    <span class="section-label"> 
+                        EXPLORE 
+                    </span> 
+
+                    <h2 id="movieTitle"> 
+                        Popular Movies 
+                    </h2> 
+                </div> 
+
+                <div class="filters"> 
+
+                    <select id="genreFilter"> 
+                        <option value="all">All Genres</option> 
+                    </select> 
+
+                    <select id="sortFilter"> 
+                        <option value="popular">Popular</option> 
+                        <option value="rating">Top Rated</option> 
+                        <option value="newest">Newest</option> 
+                    </select> 
+
+                </div> 
+
+            </div> 
+
+
+            <div class="movie-grid" id="movieGrid"> 
+
+                <!-- JS WILL INSERT MOVIE CARDS HERE --> 
+
+            </div> 
+            <button id="loadMoreBtn">Load More</button> 
+
+        </section> 
+
+
+        <!-- ======================================== 
+             SEARCH RESULTS
+        ========================================= --> 
+
+        <section class="movie-section search-section" id="searchSection"> 
+
+            <div class="section-heading"> 
+
+                <div> 
+
+                    <span class="section-label"> 
+                        SEARCH RESULT 
+                    </span> 
+
+                    <h2 id="searchResultsTitle"> 
+
+                    </h2> 
+
+                </div> 
+
+            </div> 
+
+            <div class="movie-grid" id="searchResults"> 
+
+                <!-- JS WILL INSERT SEARCH RESULTS --> 
+
+            </div> 
+
+
+        </section> 
+
+
+        <!-- ======================================== 
+             WATCHLIST
+        ========================================= --> 
+
+        <section class="movie-section" id="watchlist"> 
+
+            <div class="section-heading"> 
+
+                <div> 
+
+                    <span class="section-label"> 
+                        YOUR COLLECTION 
+                    </span> 
+
+                    <h2> 
+                        My Watchlist 
+                    </h2> 
+
+                </div> 
+
+            </div> 
+
+            <div class="movie-grid" id="watchlistGrid"> 
+
+                <!-- JS WILL INSERT WATCHLIST --> 
+
+            </div> 
+
+        </section> 
+
+
+        <!-- ======================================== 
+             MOVIE DETAILS
+        ========================================= --> 
+
+        <section class="movie-details" id="movieDetails"> 
+
+            <div class="details-poster"> 
+
+                <img id="moviePoster" src="" alt="Movie poster"> 
+
+            </div> 
+
+            <div class="details-content"> 
+
+                <span id="movieGenres"> 
+                    Action • Drama 
+                </span> 
+
+                <h2 id="movieTitle"> 
+                    Movie Title 
+                </h2> 
+
+                <div class="movie-meta"> 
+
+                    <span id="movieRating"> 
+                        ⭐ 0.0 
+                    </span> 
+
+                    <span id="movieReleaseDate"> 
+                        2026 
+                    </span> 
+
+                </div> 
+
+                <p id="movieDescription"> 
+                    Movie description will appear here. 
+                </p> 
+
+                <button class="primary-btn" id="trailerBtn"> 
+                    ▶ Watch Trailer 
+                </button> 
+
+                <button class="secondary-btn" id="addWatchlistBtn"> 
+                    + Add to Watchlist 
+                </button> 
+
+            </div> 
+
+        </section> 
+
+
+        <!-- ======================================== 
+             ERROR / EMPTY STATE
+        ========================================= --> 
+
+        <div class="message-box" id="errorMessage"> 
+            Something went wrong. Please try again. 
+        </div> 
+
+        <div class="message-box" id="emptyMessage"> 
+            No movies found. 
+        </div> 
+
+    </main> 
+<footer class="footer">
+    <div class="footer-content">
+
+        <div class="footer-brand">
+            <a href="#" class="footer-logo">
+                <span class="logo-icon">▶</span>
+                <span>REELIX</span>
+            </a>
+            <p>Discover movies, explore new stories, and save your favorites.</p>
+        </div>
+
+        <div class="footer-links">
+            <h3>Explore</h3>
+            <a href="#">Home</a>
+            <a href="#movies">Movies</a>
+            <a href="#watchlist">Watchlist</a>
+        </div>
+
+        <div class="footer-info">
+            <h3>REELIX</h3>
+            <p>A movie discovery experience built with HTML, CSS & JavaScript.</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 REELIX. All rights reserved.</p>
+        <p>Built with ❤️ using JavaScript</p>
+    </div>
+</footer>
+
+    <!-- ======================================== 
+         JAVASCRIPT
+    ========================================= --> 
+
+    <script src="script.js"></script> 
+
+</body> 
+</html>
