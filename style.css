@@ -174,7 +174,11 @@ body {
     color: var(--primary);
     font-size: 17px;
 }
-
+.mobile-menu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
 .navbar nav {
     display: flex;
     gap: 32px;
@@ -521,6 +525,9 @@ a{
 
 @media (max-width: 768px) {
 
+    .mobile-menu {
+    display: block;
+    }
     .navbar {
         position: relative;
         min-height: 76px;
